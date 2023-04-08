@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/Appointment.css";
-import NavBarHome from './NavBar_home'
+import NavBarHome from './NavBar_homeAdmin'
 import Footer from './Footer'
 
 
@@ -95,10 +95,17 @@ import Footer from './Footer'
 					<input type='text' id='vehicleName' name='vehicleName' required  value={this.state.Name} onChange={this.onChangeName}/>
 				</div>
 
-				<div className='detail'>
-					<label htmlFor=''>Tretment</label>
-					<input type='text' id='vehicleName' name='vehicleName' required value={this.state.Treatement} onChange={this.onChangeTreatement}/>
-				</div>
+				
+
+						 <div className='detail'>
+                    <label htmlFor=''> Tretment</label>
+                    <select required  value={this.state.Treatement} onChange = {this.onChangeTreatement} className="form-control">
+					<option value="Foot">Foot</option>
+                                    <option value="Head">Head</option>
+									<option value="Facial">Facial</option>
+                                </select>
+                                </div>
+                
 				
 				
 
